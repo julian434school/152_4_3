@@ -1,0 +1,83 @@
+
+
+body{
+    background-repeat: no-repeat;
+    background-color:white;  
+}
+
+
+/* 
+ * mini Bildschirme 
+ */
+@media only screen and (max-width: 599px) {
+
+    .bg0 {
+        background-image: url(../img/600x338.png);
+        background-size: cover;
+    }
+
+
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5),
+    screen and (-moz-min-device-pixel-ratio: 1.5),
+    screen and (min-device-pixel-ratio: 1.5) {
+        .bg0 {
+            background-image: url(../img/600x338@2x.png);
+        }
+    }
+}
+/*
+ * kleine Bildschirme
+ */
+@media only screen and (min-width: 600px) {
+
+    .bg0 {
+        background-image: url(../img/900x507.png);
+        background-size: cover;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5),
+    screen and (-moz-min-device-pixel-ratio: 1.5),
+    screen and (min-device-pixel-ratio: 1.5) {
+        .bg0 {
+            background-image: url(../img/900x507@2x.png);
+        }
+    }
+}
+
+/* 
+ * mittlere Bildschirme 
+ */
+@media only screen and (min-width: 900px ) { 
+
+    .bg0 {
+        background-image: url(../img/1200x676.png);
+        background-size: cover;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5),
+    screen and (-moz-min-device-pixel-ratio: 1.5),
+    screen and (min-device-pixel-ratio: 1.5) {
+        .bg0 {
+            background-image: url(../img/1200x676@2x.png);
+        }
+    } 
+}
+
+/* 
+ * grosse Bildschirme  
+ */
+@media only screen and (min-width: 1200px ) {
+
+    .bg0 {
+        background-image: url(../img/1800x1014.png);
+        background-size: cover;
+    }
+    
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5),
+    screen and (-moz-min-device-pixel-ratio: 1.5),
+    screen and (min-device-pixel-ratio: 1.5) {
+        .bg0 {
+            background-image: url(../img/1800x1014@2x.png);
+        }
+    }
+}

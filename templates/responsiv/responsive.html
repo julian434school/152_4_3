@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multimedia-Inhalte responsiv einbinden</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        img#first {
+            width: 100%;
+            height: auto;
+        }
+
+        img#second {
+            max-width: 100%;
+            height: auto;
+        }
+
+        img#third {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            padding-top: 50px;
+            height: 0;
+        }
+
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Multimedia-Inhalte responsive einbinden</h1>
+        <h2>Bilder</h2>
+
+        <!-- Das Bild wird mit der 100%igen Breite (900px) angezeigt. Die Höhe passt sich am fenster an -->
+        <h3>1.</h3>
+        <figure>
+            <img id="first" src="img/900x507.png" alt="img/900x507.png" />
+            <figcaption>Breite 900px / Höhe 507px / Grösse 10kb</figcaption>
+        </figure>
+
+        <h3>2.</h3>
+        <figure>
+            <img id="second" src="img/900x507.png" alt="img/900x507.png" />
+            <figcaption>Breite 900px / Höhe 507px / Grösse 10kb</figcaption>
+        </figure>
+
+        <h3>3.</h3>
+        <picture>
+            <source media="(min-width: 1200px)" srcset="img/1800x1014.png 1x, img/1800x1014@2x.png 2x">
+            <source media="(min-width: 900px)" srcset="img/1200x676.png 1x, img/1200x676@2x.png 2x">
+            <source media="(min-width: 600px)" srcset="img/900x507.png 1x, img/900x507@2x.png 2x">
+            <source srcset="img/600x338.png 1x, img/600x338@2x.png 2x">
+            <img id="third" src="img/900x507.png" alt="img/900x507.png">
+        </picture>
+
+        <h3>4.</h3>
+        <img src="img/900x507.png" class="img-responsive" alt="img/900x507.png">
+
+        <h2>Videos</h2>
+        <h3>5.</h3>
+        <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5qiAwDLr2sw?rel=0" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+
+        <h3>6.</h3>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" width="560" height="315"
+                src="https://www.youtube.com/embed/5qiAwDLr2sw?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+
+</html>
